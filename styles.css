@@ -84,7 +84,7 @@ figcaption {
 
 body {
   margin: 0;
-  background-color: white;
+  background-color: lightgray;
   padding: 0;
   width: 100vw;
   height: 100vh;
@@ -529,6 +529,8 @@ footer li a {
   width: 95%;
   max-width: 1400px;
   margin: 0 auto;
+  background-color: white;
+  border-radius: 5px;
 }
 
 /* On mouse-over, add a deeper shadow */
