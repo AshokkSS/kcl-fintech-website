@@ -1,15 +1,136 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link id="theme" type="text/css" href="styles.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <script src="js/light-mode.js">
+    </script>
+    <title>NFTGuide.com</title>
+    <style>
+        body {
+            animation: fadeInAnimation ease 3s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes fadeInAnimation {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+
 </head>
+<link rel="shortcut icon" href="icons/home.ico">
 
 <body>
-    <h1>Welcome to the home page</h1>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <a id="top"></a>
+    <nav class="mininavbar">
+        <p>KCL FinTech Society - Small Navbar</p>
+    </nav>
+    <div class="topnav">
+        <a href="index.html" class="active">KCL FinTech Society</a>
+        <div id="myLinks">
+            <a href="index.html">Home</a>
+            <a href="index.html">About Us</a>
+            <a href="index.html">Blog</a>
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+        <script src=js/mobile.js></script>
+    </div>
+
+    <nav class="navbar">
+        <h4>KCL FinTech Society</h4>
+        <ul class="nav-links">
+            <div class="menu">
+                <script type="text/javascript" src="js/light-mode.js"></script>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html">About Us</a></li>
+                <li><a href="index.html">Blog</a></li>
+            </div>
+        </ul>
+    </nav>
+    <main>
+        <p>
+            <img src="https://pbs.twimg.com/media/FdLR6VMXEAITw6E?format=jpg&name=large" id="image" />
+            <br />
+            <br />
+
+        </p>
+        <div class="card">
+            <section>
+                <article class="episode">
+                    <div class="episode__number">01</div>
+                    <div class="episode__content">
+                        <div class="title">Sample Text 01</div>
+                        <div class="story">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta possimus odit laborum?
+                                Animi, reiciendis optio illo sit explicabo eius nam harum consequatur delectus,
+                                perspiciatis dicta assumenda ipsam hic facilis ea.
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            </section>
+            <section>
+                <article class="episode">
+                    <div class="episode__number">02</div>
+                    <div class="episode__content">
+                        <div class="title">Sample Text 02</div>
+                        <div class="story">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus doloremque esse
+                                ipsam iusto id. Rerum optio sit, voluptate ea voluptates placeat cupiditate soluta
+                                accusantium ipsam laborum, molestiae harum dolores quisquam!
+                            </p>
+                        </div>
+                    </div>
+                </article>
+                <article class="episode">
+                    <div class="episode__number">03</div>
+                    <div class="episode__content">
+                        <div class="title">Smaple text 03</div>
+                        <div class="story">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae ut quas, eligendi minus
+                                hic corrupti! Eos incidunt, voluptas laboriosam molestias, quam possimus reprehenderit
+                                sint deserunt perspiciatis mollitia consequatur minima molestiae.
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            </section>
+        </div>
+        <div class="containerwide">
+            <section>
+                <p style="text-align:center;" class="textinfo">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Est voluptatem inventore dolorum eos
+                    obcaecati odio ad beatae magni libero, ducimus commodi dolore earum deserunt ipsam, nobis tempora
+                    tenetur, voluptate necessitatibus!
+                </p>
+            </section>
+        </div>
+        <br>
+    </main>
 </body>
+<footer>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html">About Us</a></li>
+        <li><a href="index.html">Blog</a></li>
+    </ul>
+</footer>
 
 </html>
