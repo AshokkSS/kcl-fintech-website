@@ -66,7 +66,7 @@ h4::first-letter {
   font-size: 150%;
 }
 .mobiletitle::first-letter {
-  font-size: 150%;
+  font-size: 135%;
 }
 
 p,
@@ -324,7 +324,7 @@ nav ul {
     display: block;
     position: absolute;
     right: 0;
-    top: 5px;
+    top: 3px;
     z-index: 100;
   }
 
