@@ -1,7 +1,7 @@
 html {
   font-size: 10px;
   scroll-behavior: smooth;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   width: 100vw;
 
   height: 100vh;
@@ -59,6 +59,15 @@ h3 {
 h4 {
   color: #e1c670;
   font-size: 32px;
+}
+h4::first-letter {
+  font-weight: bold;
+
+  font-size: 150%;
+}
+.mobiletitle::first-letter {
+  font-weight: bold;
+  font-size: 150%;
 }
 
 p,
@@ -311,11 +320,12 @@ nav ul {
 
   /* Style the hamburger menu */
   .topnav a.icon {
+    font-size: 2em;
     background: #761574;
     display: block;
     position: absolute;
     right: 0;
-    top: 0;
+    top: 5px;
     z-index: 100;
   }
 
