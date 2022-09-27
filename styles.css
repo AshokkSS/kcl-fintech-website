@@ -9,8 +9,8 @@ html {
 img {
   display: block;
   max-width: 100%;
-  width: auto;
-  height: auto;
+  width: 100%;
+  height: 90%;
   transition: 0.5;
   position: sticky;
 }
@@ -60,15 +60,12 @@ h4 {
   color: #e1c670;
   font-size: 32px;
 }
-h4::first-letter {
+
+.bold {
   font-weight: bold;
 
-  font-size: 150%;
+  font-size: 125%;
 }
-.mobiletitle::first-letter {
-  font-size: 135%;
-}
-
 p,
 li {
   font-size: 18px;
@@ -92,7 +89,7 @@ figcaption {
 
 body {
   margin: 0;
-  background-color: lightgray;
+  background-color: #d2bdd9;
   padding: 0;
   width: 100vw;
   height: 100vh;
