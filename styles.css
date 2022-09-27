@@ -190,14 +190,37 @@ nav ul {
 
 /* mini nav bar styling */
 .mininavbar {
-  justify-content: center;
+  height: 30px;
+  overflow: hidden;
   position: relative;
+  background-color: #bc74bc;
+  color: #e1c670;
+  justify-content: center;
   z-index: 99;
   display: flex;
   align-items: center;
-  padding: 10px;
-  background-color: #bc74bc;
-  color: #e1c670;
+  padding: 2px;
+}
+.mininavbar p {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  line-height: 30px;
+  text-align: center;
+  /* Starting position */
+  transform: translateX(100%);
+  /* Apply animation to this element */
+  animation: scroll-left 10s linear infinite;
+}
+/* Move it (define the animation) */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
 /* home page info styling*/
@@ -269,6 +292,7 @@ nav ul {
   .mininavbar {
     padding: 2px;
   }
+
   marquee {
     font-size: 14px;
   }
@@ -407,6 +431,27 @@ nav ul {
   }
   .mylinks {
     display: none;
+  }
+  .mininavbar p {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    line-height: 30px;
+    text-align: center;
+    /* Starting position */
+    transform: translateX(100%);
+    /* Apply animation to this element */
+    animation: scroll-left 15s linear infinite;
+  }
+  /* Move it (define the animation) */
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
   }
   marquee {
     font-size: 18px;
@@ -556,6 +601,15 @@ footer li a {
 /* Add some padding inside the card container */
 .containernew {
   padding: 2px 16px;
+}
+
+.scroll-left {
+  height: 50px;
+  overflow: hidden;
+  position: relative;
+  background: yellow;
+  color: orange;
+  border: 1px solid orange;
 }
 
 /* progress bar styling CURRENTLY REMOVED */
