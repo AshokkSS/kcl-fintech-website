@@ -3,15 +3,14 @@ html {
   scroll-behavior: smooth;
   font-family: "Roboto Condensed", sans-serif;
   width: 100vw;
-
+  scroll-snap-type: y mandatory;
   height: 100vh;
 }
 img {
   display: inline-block;
   max-width: auto;
-  left: 2%;
-  width: 80px;
-  height: 75px;
+  width: 320px;
+  height: 300px;
   transition: 0.5;
   position: relative;
 }
@@ -47,6 +46,9 @@ body {
   height: 100vh;
   overflow-x: hidden;
   z-index: 1000;
+  scroll-snap-type: mandatory;
+  scroll-snap-points-y: repeat(100vh);
+  scroll-snap-type: y mandatory;
 }
 
 /* headers */
@@ -66,7 +68,7 @@ h2 {
 
 h4 {
   color: white;
-  font-size: 80px;
+  font-size: 90px;
   z-index: 99;
 }
 
@@ -125,18 +127,19 @@ ul.a {
 /* NAVBAR MENU */
 .menu {
   display: flex;
-
-  gap: 0em;
+  padding: 20px;
+  gap: 1.5em;
   font-size: 18px;
   border-radius: 5px;
   align-items: center;
   font-weight: bold;
 }
 .menu li {
-  background: transparent;
-  /* background-image: linear-gradient(to left, #bb77ba, #a44ba3); */
-  border-radius: 1px;
-  transition: 0.3s ease;
+  /* background: transparent; */
+  background-image: linear-gradient(to left, #bb77ba, #a44ba3);
+  border-radius: 100px;
+  opacity: 0.85;
+  transition: 0.5s;
 }
 
 .minimenu {
@@ -144,9 +147,7 @@ ul.a {
 }
 
 .menu li:hover {
-  background-color: #101728;
-  border-radius: 5px;
-  transition: 0.3s ease;
+  opacity: 1;
 }
 .menu li {
   padding: 20px 80px;
@@ -224,12 +225,22 @@ nav ul {
   right: 100px;
   top: 0px;
 }
+.containerimgright {
+  position: absolute;
+  right: 10%;
+  top: 30%;
+}
+.containerimgleft {
+  position: absolute;
+  left: 0%;
+  top: -275%;
+}
 
 .containerlogo {
   position: absolute;
-  top: 25%;
+  top: 30%;
   left: 2%;
-  width: 40%;
+  width: 45%;
   max-width: 1600px;
   margin: 0 auto;
 }
@@ -661,10 +672,13 @@ footer li a {
   transform: translateY(0);
   opacity: 1;
 }
+
 section {
-  min-height: 100vh;
+  height: 100vh;
+  width: 100vw;
+  overflow: auto;
   justify-content: center;
-  align-items: center;
+  scroll-snap-align: start;
 }
 
 section#learnmore {
@@ -674,12 +688,18 @@ section#connect {
   background: #101728;
 }
 
+section#insight {
+  background: #101728;
+}
+section#impact {
+  background: #101728;
+}
+
 section .container {
-  margin: 100px;
   top: 200px;
   text-align: center;
-  left: 10%;
   position: relative;
+  scroll-snap-align: start;
 }
 section h1 {
   font-size: 3rem;
@@ -704,6 +724,9 @@ section .text-container .text-box {
   width: 100%;
   height: 100%;
   text-align: center;
+  animation: border-pulsate 3s infinite;
+  padding: 10px;
+  border-radius: 25px;
 }
 section .text-container .text-box h3 {
   font-size: 64px;
@@ -731,8 +754,12 @@ section .text-container-left {
 }
 section .text-container-left .text-box {
   width: 60%;
+  /* border-top: 1px solid; */
   height: 100%;
   text-align: center;
+  animation: border-pulsate 3s infinite;
+  padding: 10px;
+  border-radius: 25px;
 }
 section .text-container-left .text-box h3 {
   font-size: 64px;
@@ -742,6 +769,85 @@ section .text-container-left .text-box h3 {
 }
 section .text-container-left .text-box p {
   width: 70%;
+  position: absolute;
+  font-size: 24px;
+  text-align: left;
+  top: 250px;
+  color: white;
+}
+section .text-container-left-wide {
+  position: absolute;
+  display: flex;
+  height: 600px;
+  width: 50%;
+  text-align: center;
+  margin: 0 auto;
+  /* border: 1px solid #ffffff; */
+  background: #101728;
+}
+section .text-container-left-wide .text-box {
+  width: 87%;
+  border-top: 1px solid;
+  height: 100%;
+  text-align: center;
+  animation: border-pulsate 3s infinite;
+  padding: 10px;
+  border-radius: 25px;
+}
+section .text-container-left-wide .text-box h3 {
+  font-size: 64px;
+  text-align: left;
+  font-weight: bold;
+  color: white;
+}
+section .text-container-left-wide .text-box p {
+  width: 90%;
+  position: absolute;
+  font-size: 24px;
+  text-align: left;
+  top: 250px;
+  color: white;
+}
+
+section .text-container-right {
+  position: absolute;
+  display: flex;
+  width: 60%;
+  height: 600px;
+  left: 40%;
+  text-align: center;
+  margin: 0 auto;
+  /* border: 1px solid; */
+  background: #101728;
+}
+@keyframes border-pulsate {
+  0% {
+    box-shadow: 0 0 10px #bb77ba;
+  }
+  50% {
+    box-shadow: 0 0 10px #ffffff;
+  }
+  100% {
+    box-shadow: 0 0 10px #bb77ba;
+  }
+}
+section .text-container-right .text-box {
+  height: 100%;
+  /* border: 1px solid; */
+  text-align: center;
+  outline: none;
+  animation: border-pulsate 3s infinite;
+  padding: 10px;
+  border-radius: 25px;
+}
+
+section .text-container-right .text-box h3 {
+  font-size: 64px;
+  text-align: left;
+  font-weight: bold;
+  color: white;
+}
+section .text-container-right .text-box p {
   position: absolute;
   font-size: 24px;
   text-align: left;
@@ -808,7 +914,10 @@ section .text-container-left .text-box p {
 }
 
 .button {
-  border-radius: 4px;
+  background-image: linear-gradient(to left, #bb77ba, #a44ba3);
+  border-radius: 100px;
+  opacity: 0.85;
+  transition: 0.5s;
   background-color: #a44ba3;
   border: none;
   color: #ffffff;
@@ -823,26 +932,30 @@ section .text-container-left .text-box p {
 
 .button span {
   cursor: pointer;
+  background-image: linear-gradient(to left, #bb77ba, #a44ba3);
+  right: 5%;
   display: inline-block;
   position: relative;
   transition: 0.5s;
+  opacity: 0.85;
 }
 
 .button span:after {
   content: "\00bb";
   position: absolute;
-  opacity: 0;
+  background: transparent;
   top: 0;
   right: -20px;
   transition: 0.5s;
 }
 
 .button:hover span {
-  background-color: #a44ba3;
+  background: transparent;
   padding-right: 25px;
 }
 
 .button:hover span:after {
+  background: transparent;
   opacity: 1;
   right: 0;
 }
